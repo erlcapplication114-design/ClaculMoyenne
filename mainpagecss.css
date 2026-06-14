@@ -83,3 +83,26 @@ button {
 button:hover {
     background-color: #c0392b;
 }
+
+#btn-golden {
+    background: linear-gradient(45deg, #f1c40f, #e67e22);
+    font-weight: bold;
+    font-size: 18px;
+    margin-left: 10px;
+    transition: transform 0.1s;
+}
+
+#btn-golden:hover {
+    background: linear-gradient(45deg, #e67e22, #f1c40f);
+}
+
+#splat {
+    position: fixed;
+    font-size: 200px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0);
+    transition: transform 0.3s cubic-bezier(0.36, 0.07, 0.19, 0.97);
+    pointer-events: none;
+    z-index: 999;
+}
