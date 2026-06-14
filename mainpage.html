@@ -8,9 +8,14 @@
     <title>Document</title>
 
     <style>
+        span[id="moyenne_generale"] {
+            font-weight: bold;
+        }
+        
         span[id^="moy_"] {
             font-weight: bold;
         }   
+
         input {
             width: 60px;
         }
@@ -101,9 +106,14 @@
         </div>
     </div>
 
-    <button onclick="calculer()">Calculer</button>
+    <button>Calculer</button>
 
     <script src="scriptcalcul.js"></script>
+
+    <div>
+        <span id="moyenne_generale"></span>
+    </div>
+
 </body>
 
 </html>
