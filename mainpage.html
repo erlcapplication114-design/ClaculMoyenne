@@ -6,41 +6,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-
-    <style>
-        span[id="moyenne_generale"] {
-            font-weight: bold;
-       }
-        
-        span[id^="moy_"] {
-            font-weight: bold;
-        }   
-
-        input {
-            width: 60px;
-        }
-
-        .matiere {
-            margin-bottom: 20px;
-        }
-
-        .matiere input {
-            margin-top: 7px;
-        }
-
-        .nom_matiere {
-            font-weight: bold;
-        }
-
-        .entete {
-            margin-bottom: 20px;
-        }
-    </style>
+    
+    <link rel="stylesheet" href="mainpagecss.css">
 
 </head>
 
 <body>
-    <div class="entete"><label><strong>Veuillez saisir vos notes</strong></label></div>
+    <div class="container">
+    <div class="entete"><label><strong>CALCULATRICE DE MOYENNE SEMESTRE IV</strong></label></div>
 
     <div class="matiere">
         <label class="nom_matiere">Base de données :</label>
@@ -106,14 +79,13 @@
         </div>
     </div>
 
-    <button>Calculer</button>
-
     <script src="scriptcalcul.js"></script>
 
     <div>
         <span id="moyenne_generale"></span>
     </div>
-
+    <button onclick="vider()">Vider</button>
+</div>
 </body>
 
 </html>

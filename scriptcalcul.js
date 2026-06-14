@@ -25,7 +25,7 @@ function calculer() {
         somme += moyenne * matiere.multiple[0];
         let span = document.getElementById("moy_" + matiere.nom.toLowerCase());
 
-        if (moyenne > 0) {
+        if (moyenne > -1) {
             span.innerText = "Moyenne : " + moyenne.toFixed(2);
             span.style.color = moyenne >= 10 ? "green" : "red";
         } else {
@@ -38,11 +38,33 @@ function calculer() {
         span_moyenne_generale.innerText = "Votre moyenne générale est d'environ " + moy_generale.toFixed(2);
         span_moyenne_generale.style.color = moy_generale >= 10 ? "green" : "red";
     } else {
-        span_moyenne_generale.innerText = "Veuillez bien remplir les notes avant de lancer le calcul (si vous avez 0 veuillez mettre 0.01)";
-        span_moyenne_generale.style.color = "blue";
+        span_moyenne_generale.innerText = "Veuillez bien remplir les notes avant de lancer le calcul";
+        span_moyenne_generale.style.color = "lightgray";
     }
 }
 
 
     document.querySelectorAll("input").forEach(input => {
     input.addEventListener("input", calculer)});
+
+function charger() {
+    document.querySelectorAll("input").forEach(input => {
+        let valeur = localStorage.getItem(input.id);
+        if (valeur) input.value = valeur;
+    });
+    calculer();
+}
+
+document.querySelectorAll("input").forEach(input => {
+    input.addEventListener("input", () => {
+        localStorage.setItem(input.id, input.value);
+    });
+});
+
+charger();
+
+function vider() {
+    localStorage.clear();
+    document.querySelectorAll("input").forEach(input => input.value = "");
+    calculer();
+}

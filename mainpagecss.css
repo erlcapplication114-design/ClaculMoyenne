@@ -1,0 +1,85 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    padding: 30px;
+    color: white;
+    font-family: Arial, sans-serif;
+    background-image: url("coolphoto.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    min-height: 100vh;
+}
+
+.container {
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(10px);
+    border-radius: 15px;
+    padding: 30px;
+    width: 650px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    height: fit-content;
+}
+
+.entete {
+    font-size: 22px;
+    font-weight: bold;
+    margin-bottom: 25px;
+    display: block;
+}
+
+.matiere {
+    margin-bottom: 20px;
+    padding-bottom: 15px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.nom_matiere {
+    font-weight: bold;
+    font-size: 15px;
+    display: block;
+    margin-bottom: 8px;
+}
+
+input {
+    background: rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    border-radius: 5px;
+    color: white;
+    padding: 3px;
+    width: 60px;
+    margin-top: 7px;
+}
+
+span[id^="moy_"] {
+    font-weight: bold;
+    margin-left: 10px;
+}
+
+span[id="moyenne_generale"] {
+    font-weight: bold;
+    font-size: 18px;
+    display: block;
+    margin-top: 20px;
+}
+
+button {
+    margin-top: 20px;
+    background-color: #e74c3c;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+button:hover {
+    background-color: #c0392b;
+}
