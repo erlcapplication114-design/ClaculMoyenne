@@ -68,11 +68,3 @@ function vider() {
     document.querySelectorAll("input").forEach(input => input.value = "");
     calculer();
 }
-
-function goldenapple() {
-    let splat = document.getElementById("splat");
-    splat.style.transform = "translate(-50%, -50%) scale(5)";
-    setTimeout(() => {
-        splat.style.transform = "translate(-50%, -50%) scale(0)";
-    }, 600);
-}
