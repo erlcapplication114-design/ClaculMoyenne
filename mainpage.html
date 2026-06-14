@@ -8,6 +8,13 @@
     <title>Document</title>
 
     <style>
+        span[id^="moy_"] {
+            font-weight: bold;
+        }   
+        input {
+            width: 60px;
+        }
+
         .matiere {
             margin-bottom: 20px;
         }
@@ -32,51 +39,71 @@
 
     <div class="matiere">
         <label class="nom_matiere">Base de données :</label>
-        <div><span>TD :</span><input type="number" id="td_bdd">
-        <span>TP :</span><input type="number" id="tp_bdd">
-        <span>Examen :</span><input type="number" id="examen_bdd"></div>
+        <div>
+            <span>TD :</span><input type="number" id="td_bdd">
+            <span>TP :</span><input type="number" id="tp_bdd">
+            <span>Examen :</span><input type="number" id="examen_bdd">
+            <span id="moy_bdd"></span>
+        </div>
     </div>
 
     <div class="matiere">
         <label class="nom_matiere">Système d'exploitation 1 :</label>
-        <div><span>TD : <input type="number" id="td_se"></span>
-        <span>TP : <input type="number" id="tp_se"></span>
-        <span>Examen : <input type="number" id="examen_se"></span></div>
+        <div>
+            <span>TD : <input type="number" id="td_se"></span>
+            <span>TP : <input type="number" id="tp_se"></span>
+            <span>Examen : <input type="number" id="examen_se"></span>
+            <span id="moy_se"></span>
+
+        </div>
     </div>
 
-    <div class="matiere">    
+    <div class="matiere">
         <label class="nom_matiere">Programmation orienté objet :</label>
-        <div><span>TP : <input type="number" id="tp_poo"></span>
-        <span>Examen : </span><input type="number" id="examen_poo"></div>
+        <div>
+            <span>TP : <input type="number" id="tp_poo"></span>
+            <span>Examen : </span><input type="number" id="examen_poo">
+            <span id="moy_poo"></span>
+        </div>
     </div>
-        
-    <div class="matiere">    
+
+    <div class="matiere">
         <label class="nom_matiere">Développment d'application web :</label>
         <div><span>TP : <input type="number" id="tp_daw"></span>
-        <span>Examen : <input type="number" id="examen_daw"></span></div>
+            <span>Examen : <input type="number" id="examen_daw"></span>
+            <span id="moy_daw"></span>
+        </div>
     </div>
 
-    <div class="matiere">        
+    <div class="matiere">
         <label class="nom_matiere">Réseaux de communication :</label>
         <div><span>TD : <input type="number" id="td_reseau"></span>
-        <span>TP : <input type="number" id="tp_reseau"></span>
-        <span>Examen : <input type="number" id="examen_reseau"></span></div>
+            <span>TP : <input type="number" id="tp_reseau"></span>
+            <span>Examen : <input type="number" id="examen_reseau"></span>
+            <span id="moy_reseau"></span>
+        </div>
     </div>
 
-    <div class="matiere">        
+    <div class="matiere">
         <label class="nom_matiere">Théorie des langages :</label>
         <div><span>TD : <input type="number" id="td_thl"></span>
-        <span>TP : <input type="number" id="tp_thl"></span>
-        <span>Examen : </span><input type="number" id="examen_thl"></div>
+            <span>TP : <input type="number" id="tp_thl"></span>
+            <span>Examen : </span><input type="number" id="examen_thl">
+            <span id="moy_thl"></span>
+        </div>
     </div>
 
-    <div class="matiere">        
+    <div class="matiere">
         <label class="nom_matiere">Anglais 3 :</label>
-        <div><span>Examen : <input type="number" id="examen_anglais"></span></div>
+        <div>
+            <span>Examen : <input type="number" id="examen_anglais"></span>
+            <span id="moy_anglais"></span>
+        </div>
     </div>
 
     <button onclick="calculer()">Calculer</button>
 
     <script src="scriptcalcul.js"></script>
 </body>
+
 </html>
