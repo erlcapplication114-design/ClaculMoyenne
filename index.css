@@ -1,0 +1,68 @@
+body {
+display: flex;
+    justify-content: center;
+    padding: 30px;
+    color: white;
+    font-family: Arial, sans-serif;
+    background-image: url("coolphoto.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    min-height: 100vh;
+}
+.container {
+        background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(10px);
+    border-radius: 15px;
+    padding-left: 200px;
+    padding-right: 200px;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    height: fit-content;
+}
+
+span {
+    font-weight: bold;
+    margin-bottom: 25px;
+}
+
+.specialite {
+    display: block;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.container2 {
+    display: flex;
+    justify-content: center;
+}
+
+
+a {
+    background: rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    border-radius: 5px;
+    color: white;
+    margin: 4px;
+    padding: 10px 20px;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+button {
+    background: rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    border-radius: 5px;
+    color: white;
+    padding: 10px 20px;
+    margin: 10px;
+    cursor: pointer;
+    font-size: 14px;
+}
+button:hover {
+    background: rgba(255, 255, 255, 0.2);
+}
+button:active {
+    background: rgba(255, 255, 255, 0.3);   
+}

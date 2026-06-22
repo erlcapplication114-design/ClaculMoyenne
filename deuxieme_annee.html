@@ -6,86 +6,172 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    
-    <link rel="stylesheet" href="mainpagecss.css">
+
+    <link rel="stylesheet" href="deuxieme_annee.css">
 
 </head>
 
 <body>
-    <div class="container">
-    <div class="entete"><label><strong>CALCULATRICE DE MOYENNE SEMESTRE IV</strong></label></div>
+<div class="container">
+        <div class="entete"><label><strong>CALCULATRICE DE MOYENNE SEMESTRE III</strong></label></div>
 
-    <div class="matiere">
-        <label class="nom_matiere">Base de données :</label>
+        <div class="matiere">
+            <label class="nom_matiere">Algorithmique et Structure de Données III :</label>
+            <div>
+                <span>TD :</span><input type="number" id="td_algo3">
+                <span>TP :</span><input type="number" id="tp_algo3">
+                <span>Examen :</span><input type="number" id="examen_algo3">
+                <span id="moy_algo3"></span>
+            </div>
+        </div>
+
+        <div class="matiere">
+            <label class="nom_matiere">Architecture des Ordinateurs :</label>
+            <div>
+                <span>TD :<input type="number" id="td_ao"></span>
+                <span>TP :<input type="number" id="tp_ao"></span>
+                <span>Examen :<input type="number" id="examen_ao"></span>
+                <span id="moy_ao"></span>
+
+            </div>
+        </div>
+
+        <div class="matiere">
+            <label class="nom_matiere">Système d'Information :</label>
+            <div><span>TD :<input type="number" id="td_si"></span>
+                <span>TP :<input type="number" id="tp_si"></span>
+                <span>Examen :<input type="number" id="examen_si"></span>
+                <span id="moy_si"></span>
+            </div>
+        </div>
+
+        <div class="matiere">
+            <label class="nom_matiere">Théorie des graphes :</label>
+            <div>
+                <span>TD :<input type="number" id="td_thg"></span>
+                <span>Examen :</span><input type="number" id="examen_thg">
+                <span id="moy_thg"></span>
+            </div>
+        </div>
+
+        
+
+        <div class="matiere">
+            <label class="nom_matiere">Logique Mathématique :</label>
+            <div><span>TD :<input type="number" id="td_lm"></span>
+                <span>Examen :<input type="number" id="examen_lm"></span>
+                <span id="moy_lm"></span>
+            </div>
+        </div>
+
+        <div class="matiere">
+            <label class="nom_matiere">Méthode Numérique :</label>
+                <span>TP :<input type="number" id="tp_mn"></span>
+                <span>Examen :</span><input type="number" id="examen_mn">
+                <span id="moy_mn"></span>
+            </div>
+
+        <div class="matiere">
+            <label class="nom_matiere">Anglais 2 :</label>
+            <div>
+                <span>Examen :<input type="number" id="examen_anglais2"></span>
+                <span id="moy_anglais2"></span>
+            </div>
+        </div>
+
         <div>
-            <span>TD :</span><input type="number" id="td_bdd">
-            <span>TP :</span><input type="number" id="tp_bdd">
-            <span>Examen :</span><input type="number" id="examen_bdd">
-            <span id="moy_bdd"></span>
+            <span id="moyenne_semestrielle"></span>
         </div>
-    </div>
-
-    <div class="matiere">
-        <label class="nom_matiere">Système d'exploitation 1 :</label>
-        <div>
-            <span>TD : <input type="number" id="td_se"></span>
-            <span>TP : <input type="number" id="tp_se"></span>
-            <span>Examen : <input type="number" id="examen_se"></span>
-            <span id="moy_se"></span>
-
-        </div>
-    </div>
-
-    <div class="matiere">
-        <label class="nom_matiere">Programmation orienté objet :</label>
-        <div>
-            <span>TP : <input type="number" id="tp_poo"></span>
-            <span>Examen : </span><input type="number" id="examen_poo">
-            <span id="moy_poo"></span>
-        </div>
-    </div>
-
-    <div class="matiere">
-        <label class="nom_matiere">Développment d'application web :</label>
-        <div><span>TP : <input type="number" id="tp_daw"></span>
-            <span>Examen : <input type="number" id="examen_daw"></span>
-            <span id="moy_daw"></span>
-        </div>
-    </div>
-
-    <div class="matiere">
-        <label class="nom_matiere">Réseaux de communication :</label>
-        <div><span>TD : <input type="number" id="td_reseau"></span>
-            <span>TP : <input type="number" id="tp_reseau"></span>
-            <span>Examen : <input type="number" id="examen_reseau"></span>
-            <span id="moy_reseau"></span>
-        </div>
-    </div>
-
-    <div class="matiere">
-        <label class="nom_matiere">Théorie des langages :</label>
-        <div><span>TD : <input type="number" id="td_thl"></span>
-            <span>TP : <input type="number" id="tp_thl"></span>
-            <span>Examen : </span><input type="number" id="examen_thl">
-            <span id="moy_thl"></span>
-        </div>
-    </div>
-
-    <div class="matiere">
-        <label class="nom_matiere">Anglais 3 :</label>
-        <div>
-            <span>Examen : <input type="number" id="examen_anglais"></span>
-            <span id="moy_anglais"></span>
-        </div>
-    </div>
-
-    <script src="scriptcalcul.js"></script>
-
-    <div>
-        <span id="moyenne_generale"></span>
-    </div>
-    <button onclick="vider()">Vider</button>
 </div>
+
+        <script src="scriptcalcul.js"></script>
+
+        
+    </div>
+
+
+
+
+
+
+
+
+    <div class="container">
+        <div class="entete"><label><strong>CALCULATRICE DE MOYENNE SEMESTRE IV</strong></label></div>
+
+        <div class="matiere">
+            <label class="nom_matiere">Base de données :</label>
+            <div>
+                <span>TD :</span><input type="number" id="td_bdd">
+                <span>TP :</span><input type="number" id="tp_bdd">
+                <span>Examen :</span><input type="number" id="examen_bdd">
+                <span id="moy_bdd"></span>
+            </div>
+        </div>
+
+        <div class="matiere">
+            <label class="nom_matiere">Système d'exploitation 1 :</label>
+            <div>
+                <span>TD :<input type="number" id="td_se"></span>
+                <span>TP :<input type="number" id="tp_se"></span>
+                <span>Examen :<input type="number" id="examen_se"></span>
+                <span id="moy_se"></span>
+
+            </div>
+        </div>
+
+        <div class="matiere">
+            <label class="nom_matiere">Programmation orienté objet :</label>
+            <div>
+                <span>TP :<input type="number" id="tp_poo"></span>
+                <span>Examen :</span><input type="number" id="examen_poo">
+                <span id="moy_poo"></span>
+            </div>
+        </div>
+
+        <div class="matiere">
+            <label class="nom_matiere">Développment d'application web :</label>
+            <div><span>TP :<input type="number" id="tp_daw"></span>
+                <span>Examen :<input type="number" id="examen_daw"></span>
+                <span id="moy_daw"></span>
+            </div>
+        </div>
+
+        <div class="matiere">
+            <label class="nom_matiere">Réseaux de communication :</label>
+            <div><span>TD :<input type="number" id="td_reseau"></span>
+                <span>TP :<input type="number" id="tp_reseau"></span>
+                <span>Examen :<input type="number" id="examen_reseau"></span>
+                <span id="moy_reseau"></span>
+            </div>
+        </div>
+
+        <div class="matiere">
+            <label class="nom_matiere">Théorie des langages :</label>
+            <div><span>TD :<input type="number" id="td_thl"></span>
+                <span>TP :<input type="number" id="tp_thl"></span>
+                <span>Examen :</span><input type="number" id="examen_thl">
+                <span id="moy_thl"></span>
+            </div>
+        </div>
+
+        <div class="matiere">
+            <label class="nom_matiere">Anglais 3 :</label>
+            <div>
+                <span>Examen :<input type="number" id="examen_anglais"></span>
+                <span id="moy_anglais"></span>
+            </div>
+        </div>
+        
+        <div>
+            <span id="moyenne_semestrielle2"></span>
+        </div>
+
+        <button onclick="vider()">Vider</button>
+
+    </div>
+        <script src="scriptcalcul.js"></script>
+
 </body>
 
 </html>

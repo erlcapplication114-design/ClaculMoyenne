@@ -1,33 +1,49 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+
+    <link rel="stylesheet" href="index.css">
+
 </head>
+
 <body>
-    <span>Veuillez choisir votre spécialité</span>
-    <div>
-        <button onclick="afficher('affichageTC')">Pas de spécialité (Tronc commun)</button>
-        <button onclick="afficher('affichageSI')">SI</button>
-        <button onclick="afficher('affichageISIL')">ISIL</button>
+
+    <div class="container">
+        <span>Veuillez choisir votre spécialité</span>
+        <div>
+            <button onclick="afficher('affichageTC')">Tronc commun (Pas de spécialité)</button>
+            <button onclick="afficher('affichageSI')">SI</button>
+            <button onclick="afficher('affichageISIL')">ISIL</button>
+        </div>
+
+        <div id="affichage1" style="display: none;">
+            <span>Veuillez choisir votre niveau d'étude</span>
+        </div>
+
+        <div id="affichageTC" class="specialite" style="display: none;">
+            <div class="container2">
+                <a href="premiere_annee.html">Première année</a>
+                <a href="deuxieme_annee.html">Deuxième année</a>
+            </div>
+        </div>
+        <div id="affichageSI" class="specialite" style="display: none;">
+            <div class="container2">
+            <a href="troisieme_annee.html">Troisième année</a>
+            </div>
+        </div>
+        <div id="affichageISIL" class="specialite" style="display: none;">
+            <div class="container2">
+                <a href="troisieme_annee.html">Troisième année</a>
+            </div>
+        </div>
+
     </div>
 
-    <div id="affichage1" style="display: none;">
-        <span>Veuillez choisir votre niveau d'étude</span>
-    </div>
-
-    <div id="affichageTC" class="specialite" style="display: none;">
-        <a href="premiere_annee.html">Première année</a>
-        <a href="deuxieme_annee.html">Deuxième année</a>
-    </div>
-    <div id="affichageSI" class="specialite" style="display: none;">
-        <a href="troisieme_annee.html">Troisième année</a>
-    </div>
-    <div id="affichageISIL" class="specialite" style="display: none;">
-        <a href="troisieme_annee.html">Troisième année</a>
-    </div>
-
-    <script src="maindashboard.js"></script>
+    <script src="index.js"></script>
 </body>
+
 </html>
