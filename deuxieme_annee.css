@@ -33,7 +33,7 @@ body {
     margin: 20px;
     padding: 30px;
     width: 650px;
-    border: 1px solid rgba(255, 0, 0, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0);
     height: fit-content;
 }
 .container2 {
@@ -44,7 +44,7 @@ body {
     margin: 20px;
     padding: 30px;
     width: 650px;
-    border: 1px solid rgba(255, 0, 0, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0);
     height: fit-content;
 }
 
@@ -134,7 +134,7 @@ button:hover {
     backdrop-filter: blur(10px);
     border-radius: 15px;
     padding: 20px 30px;
-    border: 1px solid rgba(255, 0, 0, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.1);
     height: fit-content;
     width: fit-content;
     font-weight: bold;

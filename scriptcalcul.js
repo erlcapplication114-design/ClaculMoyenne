@@ -22,8 +22,8 @@ function calculer() {
     let somme2 = calculerR(matieres2);
     let somme1 = calculerR(matieres);
 
-    calculerMoyenneSem(somme2, "moyenne_semestrielle");
-    calculerMoyenneSem(somme1, "moyenne_semestrielle2");
+    calculerMoyenneSem(somme2, "moyenne_semestrielle", document.getElementById("container1_id"));
+    calculerMoyenneSem(somme1, "moyenne_semestrielle2", document.getElementById("container2_id"));
     calculerMoyenneGen(somme1, somme2, "moyenne_generale");
 
 }
@@ -60,7 +60,9 @@ function calculerMoyenneGen (semestre1, semestre2, span_of_div) {
 
     let moy1 = semestre1 / 16;
     let moy2 = semestre2 / 16;
-    let moyenne = (moy1 + moy2) / 2;    let span_moyenne_generale = document.getElementById(span_of_div);
+    let moyenne = (moy1 + moy2) / 2;    
+    let span_moyenne_generale = document.getElementById(span_of_div);
+    let span_border = document.getElementById("container3_id")
     if (moyenne > 0) {
         span_moyenne_generale.innerText = "Votre moyenne générale est d'environ " + moyenne.toFixed(2);
         span_moyenne_generale.style.color = moyenne >= 10 ? "#26ff00" : "#ff0000";
@@ -70,9 +72,10 @@ function calculerMoyenneGen (semestre1, semestre2, span_of_div) {
     }
 }
 
-function calculerMoyenneSem (somme, span_of_div) {
+function calculerMoyenneSem (somme, span_of_div, container) {
     let moy_generale = somme / 16;
     let span_moyenne_generale = document.getElementById(span_of_div);
+    let span_border = container;
     if (moy_generale > 0) {
         span_moyenne_generale.innerText = "Votre moyenne semestrielle est d'environ " + moy_generale.toFixed(2);
         span_moyenne_generale.style.color = moy_generale >= 10 ? "#26ff00" : "red";
