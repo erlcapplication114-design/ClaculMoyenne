@@ -1,9 +1,13 @@
 * {
-    margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
-
+.page-wrap {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start; /* keeps the return link left-aligned */
+    width: 100%;
+}
 body {
     display: flex;
     justify-content: center;
@@ -17,15 +21,30 @@ body {
     min-height: 100vh;
 }
 
+.flex-container {
+  display: flex; 
+  gap: 20px;     
+}
 
-.container {
+.container1 {
     background: rgba(255, 255, 255, 0.05);
     backdrop-filter: blur(10px);
     border-radius: 15px;
     margin: 20px;
     padding: 30px;
     width: 650px;
-    border: 1px solid rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 0, 0, 0.1);
+    height: fit-content;
+}
+.container2 {
+    
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(10px);
+    border-radius: 15px;
+    margin: 20px;
+    padding: 30px;
+    width: 650px;
+    border: 1px solid rgba(255, 0, 0, 0.1);
     height: fit-content;
 }
 
@@ -85,4 +104,39 @@ button {
 
 button:hover {
     background-color: #c0392b;
+}
+
+.return {
+    background: rgba(255, 255, 255, 0.1);
+    text-decoration: none;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    border-radius: 5px;
+    color: white;
+    padding: 10px 20px;
+    margin: 10px;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+.return:hover {
+    background: rgba(255, 255, 255, 0.2);
+    transition-duration: 0.1s;
+    
+}
+.return:active {
+    background: rgba(255, 255, 255, 0.3);   
+}
+
+.container3 {
+    align-self: center;
+    display: flex;
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(10px);
+    border-radius: 15px;
+    padding: 20px 30px;
+    border: 1px solid rgba(255, 0, 0, 0.1);
+    height: fit-content;
+    width: fit-content;
+    font-weight: bold;
+    font-size: 18px;
 }

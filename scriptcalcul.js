@@ -22,8 +22,9 @@ function calculer() {
     let somme2 = calculerR(matieres2);
     let somme1 = calculerR(matieres);
 
-    calculerMoyenneGen(somme2, "moyenne_semestrielle");
-    calculerMoyenneGen(somme1, "moyenne_semestrielle2");
+    calculerMoyenneSem(somme2, "moyenne_semestrielle");
+    calculerMoyenneSem(somme1, "moyenne_semestrielle2");
+    calculerMoyenneGen(somme1, somme2, "moyenne_generale");
 
 }
 
@@ -35,7 +36,6 @@ function calculerR (matieres) {
         matiere.ids.forEach((id, i) => {
             let note = document.getElementById(id).value || 0;
             if (note < 0 || note > 20) {
-                alert("Veuillez entrer une note valide entre 0 et 20 pour " + matiere.nom);
                 return;
             }
             moyenne += note * matiere.coefs[i];
@@ -47,7 +47,7 @@ function calculerR (matieres) {
 
         if (moyenne > -1) {
             span.innerText = "Moyenne : " + moyenne.toFixed(2);
-            span.style.color = moyenne >= 10 ? "green" : "red";
+            span.style.color = moyenne >= 10 ? "#26ff00" : "red";
         } else {
             span.innerText = "";
         }
@@ -56,13 +56,26 @@ function calculerR (matieres) {
     return somme;
    
 }
+function calculerMoyenneGen (semestre1, semestre2, span_of_div) {
 
-function calculerMoyenneGen (somme, span_of_div) {
+    let moy1 = semestre1 / 16;
+    let moy2 = semestre2 / 16;
+    let moyenne = (moy1 + moy2) / 2;    let span_moyenne_generale = document.getElementById(span_of_div);
+    if (moyenne > 0) {
+        span_moyenne_generale.innerText = "Votre moyenne générale est d'environ " + moyenne.toFixed(2);
+        span_moyenne_generale.style.color = moyenne >= 10 ? "#26ff00" : "#ff0000";
+    } else {
+        span_moyenne_generale.innerText = "Veuillez bien remplir les notes avant de lancer le calcul";
+        span_moyenne_generale.style.color = "lightgray";
+    }
+}
+
+function calculerMoyenneSem (somme, span_of_div) {
     let moy_generale = somme / 16;
     let span_moyenne_generale = document.getElementById(span_of_div);
     if (moy_generale > 0) {
         span_moyenne_generale.innerText = "Votre moyenne semestrielle est d'environ " + moy_generale.toFixed(2);
-        span_moyenne_generale.style.color = moy_generale >= 10 ? "green" : "red";
+        span_moyenne_generale.style.color = moy_generale >= 10 ? "#26ff00" : "red";
     } else {
         span_moyenne_generale.innerText = "Veuillez bien remplir les notes avant de lancer le calcul";
         span_moyenne_generale.style.color = "lightgray";
