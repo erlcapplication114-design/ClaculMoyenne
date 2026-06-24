@@ -2,15 +2,8 @@
     padding: 0;
     box-sizing: border-box;
 }
-.page-wrap {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start; /* keeps the return link left-aligned */
-    width: 100%;
-}
+
 body {
-    display: flex;
-    justify-content: center;
     padding: 30px;
     color: white;
     font-family: Arial, sans-serif;
@@ -21,31 +14,45 @@ body {
     min-height: 100vh;
 }
 
-.flex-container {
-  display: flex; 
-  gap: 20px;     
+.page-wrap {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    margin: 0 auto;
 }
 
-.container1 {
+.flex-container {
+    display: flex;
+    gap: 20px;
+    width: 100%;
+    padding: 0 20px;
+}
+.container1, .container2 {
     background: rgba(255, 255, 255, 0.05);
     backdrop-filter: blur(10px);
     border-radius: 15px;
-    margin: 20px;
+    min-width: 0;     
+    width: auto;
+    margin: auto;
     padding: 30px;
-    width: 650px;
     border: 1px solid rgba(255, 255, 255, 0);
     height: fit-content;
 }
-.container2 {
-    
+
+.container3 {
+    margin-top: 15px;
+    align-self: center;
     background: rgba(255, 255, 255, 0.05);
     backdrop-filter: blur(10px);
     border-radius: 15px;
-    margin: 20px;
-    padding: 30px;
-    width: 650px;
-    border: 1px solid rgba(255, 255, 255, 0);
+    padding: 20px 30px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
     height: fit-content;
+    width: fit-content;
+    font-weight: bold;
+    font-size: 18px;
+    text-align: center;
 }
 
 .entete {
@@ -89,6 +96,28 @@ span[id^="moyenne_semestrielle"] {
     font-size: 18px;
     display: block;
     margin-top: 20px;
+    text-align: center;
+}
+
+.return {
+    background: rgba(255, 255, 255, 0.1);
+    text-decoration: none;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    border-radius: 5px;
+    color: white;
+    padding: 10px 20px;
+    margin: 15px;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+.return:hover {
+    background: rgba(255, 255, 255, 0.2);
+    transition-duration: 0.1s;
+}
+
+.return:active {
+    background: rgba(255, 255, 255, 0.3);
 }
 
 button {
@@ -104,39 +133,4 @@ button {
 
 button:hover {
     background-color: #c0392b;
-}
-
-.return {
-    background: rgba(255, 255, 255, 0.1);
-    text-decoration: none;
-    border: 1px solid rgba(255, 255, 255, 0.3);
-    border-radius: 5px;
-    color: white;
-    padding: 10px 20px;
-    margin: 10px;
-    cursor: pointer;
-    font-size: 14px;
-}
-
-.return:hover {
-    background: rgba(255, 255, 255, 0.2);
-    transition-duration: 0.1s;
-    
-}
-.return:active {
-    background: rgba(255, 255, 255, 0.3);   
-}
-
-.container3 {
-    align-self: center;
-    display: flex;
-    background: rgba(255, 255, 255, 0.05);
-    backdrop-filter: blur(10px);
-    border-radius: 15px;
-    padding: 20px 30px;
-    border: 1px solid rgba(255, 255, 255, 0.1);
-    height: fit-content;
-    width: fit-content;
-    font-weight: bold;
-    font-size: 18px;
 }
