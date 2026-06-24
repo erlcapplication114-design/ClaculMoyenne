@@ -29,14 +29,16 @@ body {
     padding: 0 20px;
 }
 .container1, .container2 {
+    display: flex;
+    flex-direction: column; /* Optionnel : pour aligner vos éléments internes verticalement */
     background: rgba(255, 255, 255, 0.05);
     backdrop-filter: blur(10px);
     border-radius: 15px;
     min-width: 0;     
-    width: auto;
-    margin: auto;
+    flex: 1;                /* FORCE les deux blocs à prendre la même largeur égale */
+    margin: 0;              /* SUPPRIME le 'auto' qui cassait l'alignement flex */
     padding: 30px;
-    border: 1px solid rgba(255, 255, 255, 0);
+    border: 1px solid rgba(255, 255, 255, 0.1); /* Augmenté l'opacité à 0.1 pour qu'elle soit visible */
     height: fit-content;
 }
 
