@@ -3,6 +3,8 @@ function calculer() {
         premiereAnnee();
     } else if (document.getElementById("td_bdd")) {
         deuxiemeAnnee();
+    } else if (document.getElementById("td_se2")) {
+        troisieme_annee_si();
     }
 }
 
@@ -22,7 +24,7 @@ function premiereAnnee() {
         { nom: "ALGO2", ids: ["td_algo2", "tp_algo2", "examen_algo2"], coefs: [0.2, 0.2, 0.6], multiple: [5] },
         { nom: "SM2", ids: ["td_sm2", "examen_sm2"], coefs: [0.4, 0.6], multiple: [3] },
         { nom: "LM1", ids: ["td_lm1", "examen_lm1"], coefs: [0.4, 0.6], multiple: [2] },
-        { nom: "IA", ids: ["td_ia", "tp_ia", "examen_ia"], coefs: [0.2, 0.2, 0.6], multiple: [3] },
+        { nom: "IIA", ids: ["td_iia", "tp_iia", "examen_iia"], coefs: [0.2, 0.2, 0.6], multiple: [3] },
         { nom: "EF", ids: ["td_ef", "tp_ef", "examen_ef"], coefs: [0.2, 0.2, 0.6], multiple: [2] },
     ];
     let somme1 = calculerR(matieres);
@@ -53,6 +55,36 @@ function deuxiemeAnnee() {
         { nom: "MN", ids: ["tp_mn", "examen_mn"], coefs: [0.4, 0.6], multiple: [2] },
         { nom: "Anglais2", ids: ["examen_anglais2"], coefs: [1], multiple: [1] },
     ];
+    let somme1 = calculerR(matieres);
+    let somme2 = calculerR(matieres2);
+    let total1 = matieres.reduce((acc, m) => acc + m.multiple[0], 0);
+    let total2 = matieres2.reduce((acc, m) => acc + m.multiple[0], 0);
+    calculerMoyenneSem(somme2, total2, "moyenne_semestrielle");
+    calculerMoyenneSem(somme1, total1, "moyenne_semestrielle2");
+    calculerMoyenneGen(somme1, somme2, total1, total2, "moyenne_generale");
+}
+
+function troisieme_annee_si () {
+    let matieres = [
+        {nom: "SE2", ids: ["td_se2", "tp_se2", "examen_se2"], coefs: [0.2, 0.2, 0.6], multiple:[3]},
+        {nom: "COMP", ids: ["td_comp", "tp_comp", "examen_comp"], coefs: [0.2, 0.2, 0.6], multiple:[3]},
+        {nom: "GL", ids: ["td_gl", "tp_gl", "examen_gl"], coefs: [0.2, 0.2, 0.6], multiple:[3]},
+        {nom: "IHM", ids: ["td_ihm", "tp_ihm", "examen_ihm"], coefs: [0.2, 0.2, 0.6], multiple:[3]},
+        {nom: "PL", ids: ["td_pl", "examen_pl"], coefs: [0.4, 0.6], multiple:[2]},
+        {nom: "PS", ids: ["td_ps", "examen_ps"], coefs: [0.4, 0.6], multiple:[2]},
+        {nom: "ECONOMIE", ids: ["examen_pl"], coefs: [1], multiple:[1]},
+    ];
+    
+    let matieres2 = [
+        {nom: "AM", ids: ["tp_am", "examen_am"], coefs: [0.4, 0.6], multiple:[3]},
+        {nom: "CYBERSECURITY", ids: ["td_cybersecurity", "examen_cybersecurity"], coefs: [0.4, 0.6], multiple:[3]},
+        {nom: "IA", ids: ["tp_ia", "examen_ia"], coefs: [0.4, 0.6], multiple:[3]},
+        {nom: "DSS", ids: [ "tp_dss", "examen_dss"], coefs: [0.4, 0.6], multiple:[3]},
+        {nom: "PROJET", ids: ["examen_se2"], coefs: [0.4, 0.6], multiple:[3]},
+        {nom: "RS", ids: ["td_rs", "examen_rs"], coefs: [0.4, 0.6], multiple:[1]},
+        {nom: "CDS", ids: ["examen_cds"], coefs: [1], multiple:[1]},
+    ];
+
     let somme1 = calculerR(matieres);
     let somme2 = calculerR(matieres2);
     let total1 = matieres.reduce((acc, m) => acc + m.multiple[0], 0);
