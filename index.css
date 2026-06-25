@@ -54,7 +54,7 @@ span {
 
 a {
     background: rgba(255, 255, 255, 0.1);
-    border: 1px solid rgba(255, 255, 255, 0.3);
+    border: 3px groove rgba(255, 255, 255, 0.3);
     border-radius: 5px;
     color: white;
     margin: 4px;
@@ -63,19 +63,30 @@ a {
     font-size: 14px;
 }
 
+a:hover {
+    border: 3px double #FF00FF;
+    background: rgba(255, 255, 255, 0.2);
+    transform: scale(1.04);
+}
 button {
     background: rgba(255, 255, 255, 0.1);
-    border: 1px solid rgba(255, 255, 255, 0.3);
     border-radius: 5px;
     color: white;
-    padding: 10px 20px;
+    border: 3px solid rgba(255, 255, 255, 0.3);
+    padding: 10px 20px; /* ← same as hover */
     margin: 10px;
     cursor: pointer;
     font-size: 14px;
+    transition: 0.1s;
 }
+
 button:hover {
+    border: 3px double #FF00FF;
     background: rgba(255, 255, 255, 0.2);
+    transform: scale(1.04);
+
 }
+
 button:active {
     background: rgba(255, 255, 255, 0.3);   
 }

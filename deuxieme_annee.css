@@ -104,7 +104,7 @@ span[id^="moyenne_semestrielle"] {
 .return {
     background: rgba(255, 255, 255, 0.1);
     text-decoration: none;
-    border: 1px solid rgba(255, 255, 255, 0.3);
+    border: 3px solid rgba(255, 255, 255, 0.3);
     border-radius: 5px;
     color: white;
     padding: 10px 20px;
@@ -116,6 +116,8 @@ span[id^="moyenne_semestrielle"] {
 .return:hover {
     background: rgba(255, 255, 255, 0.2);
     transition-duration: 0.1s;
+    border: 3px double #FF00FF;
+    transform: scale(1.05);
 }
 
 .return:active {
