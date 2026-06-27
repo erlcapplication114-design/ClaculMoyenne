@@ -3,6 +3,7 @@ function calculer() {
     if (page === "premiere_annee") premiereAnnee();
     else if (page === "deuxieme_annee") deuxiemeAnnee();
     else if (page === "troisieme_annee_si") troisieme_annee_si();
+    else if (page === "troisieme_annee_isil") troisieme_annee_isil();
 }
 
 function premiereAnnee() {
@@ -77,23 +78,23 @@ function troisieme_annee_si() {
 
 function troisieme_annee_isil() {
     let matieres = [
-        { nom: "SE2", ids: ["td_se2", "tp_se2", "examen_se2"], coefs: [0.2, 0.2, 0.6], multiple: 3 },
-        { nom: "COMP", ids: ["td_comp", "tp_comp", "examen_comp"], coefs: [0.2, 0.2, 0.6], multiple: 3 },
-        { nom: "GL", ids: ["td_gl", "tp_gl", "examen_gl"], coefs: [0.2, 0.2, 0.6], multiple: 3 },
-        { nom: "IHM", ids: ["td_ihm", "tp_ihm", "examen_ihm"], coefs: [0.2, 0.2, 0.6], multiple: 3 },
-        { nom: "PL", ids: ["td_pl", "examen_pl"], coefs: [0.4, 0.6], multiple: 2 },
-        { nom: "PS", ids: ["td_ps", "examen_ps"], coefs: [0.4, 0.6], multiple: 2 },
-        { nom: "ECONOMIE", ids: ["examen_economie"], coefs: [1], multiple: 1 },
+        { nom: "SID", ids: ["td_sid", "tp_sid", "examen_sid"], coefs: [0.2, 0.2, 0.6], multiple: 3 },
+        { nom: "SAD", ids: ["tp_sad", "examen_sad"], coefs: [0.4, 0.6], multiple: 2 },
+        { nom: "GL_ISIL", ids: ["td_gl_isil", "tp_gl_isil", "examen_gl_isil"], coefs: [0.2, 0.2, 0.6], multiple: 3 },
+        { nom: "IHM_ISIL", ids: ["td_ihm_isil", "tp_ihm_isil", "examen_ihm_isil"], coefs: [0.2, 0.2, 0.6], multiple: 3 },
+        { nom: "ASI", ids: ["td_asi", "examen_asi"], coefs: [0.4, 0.6], multiple: 2 },
+        { nom: "PAW", ids: ["td_paw", "examen_paw"], coefs: [0.4, 0.6], multiple: 2 },
+        { nom: "ECONOMIE_ISIL", ids: ["examen_economie_isil"], coefs: [1], multiple: 1 },
     ];
 
     let matieres2 = [
-        { nom: "AM", ids: ["tp_am", "examen_am"], coefs: [0.4, 0.6], multiple: 3 },
-        { nom: "CYBERSECURITY", ids: ["td_cybersecurity", "examen_cybersecurity"], coefs: [0.4, 0.6], multiple: 3 },
-        { nom: "IA", ids: ["tp_ia", "examen_ia"], coefs: [0.4, 0.6], multiple: 3 },
-        { nom: "DSS", ids: ["tp_dss", "examen_dss"], coefs: [0.4, 0.6], multiple: 3 },
-        { nom: "PROJET", ids: ["examen_projet"], coefs: [1], multiple: 3 },
-        { nom: "RS", ids: ["td_rs", "examen_rs"], coefs: [0.4, 0.6], multiple: 1 },
-        { nom: "CDS", ids: ["examen_cds"], coefs: [1], multiple: 1 },
+        { nom: "RI", ids: ["td_ri", "examen_ri"], coefs: [0.4, 0.6], multiple: 3 },
+        { nom: "CYBERSECURITY_ISIL", ids: ["td_cybersecurity_isil", "examen_cybersecurity_isil"], coefs: [0.4, 0.6], multiple: 3 },
+        { nom: "DSS_ISIL", ids: ["tp_dss_isil", "examen_dss_isil"], coefs: [0.4, 0.6], multiple: 3 },
+        { nom: "SE2_ISIL", ids: ["td_se2_isil", "tp_se2_isil", "examen_se2_isil"], coefs: [0.2, 0.2, 0.6], multiple: 3 },
+        { nom: "PROJET_ISIL", ids: ["examen_projet_isil"], coefs: [1], multiple: 3 },
+        { nom: "BI", ids: ["examen_bi"], coefs: [1], multiple: 1 },
+        { nom: "RS_ISIL", ids: ["examen_rs_isil"], coefs: [1], multiple: 1 },
     ];
     calculerAnnee(matieres, matieres2);
 }
