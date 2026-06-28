@@ -4,6 +4,7 @@ function calculer() {
     else if (page === "deuxieme_annee") deuxiemeAnnee();
     else if (page === "troisieme_annee_si") troisieme_annee_si();
     else if (page === "troisieme_annee_isil") troisieme_annee_isil();
+    else if (page === "deuxieme_annee_new") deuxiemeAnneeNew();
 }
 
 function premiereAnnee() {
@@ -48,6 +49,33 @@ function deuxiemeAnnee() {
         { nom: "MN", ids: ["tp_mn", "examen_mn"], coefs: [0.4, 0.6], multiple: 2 },
         { nom: "Anglais2", ids: ["examen_anglais2"], coefs: [1], multiple: 1 },
     ];
+
+    calculerAnnee(matieres, matieres2);
+
+}
+
+function deuxiemeAnneeNew() {
+    let matieres = [
+        { nom: "ALGO3_NEW", ids: ["td_algo3_new", "tp_algo3_new", "examen_algo3_new"], coefs: [0.2, 0.2, 0.6], multiple: 3 },
+        { nom: "AO_NEW", ids: ["td_ao_new", "tp_ao_new", "examen_ao_new"], coefs: [0.2, 0.2, 0.6], multiple: 3 },
+        { nom: "SI_NEW", ids: ["td_si_new", "tp_si_new", "examen_si_new"], coefs: [0.2, 0.2, 0.6], multiple: 3 },
+        { nom: "PS", ids: ["td_ps", "examen_ps"], coefs: [0.4, 0.6], multiple: 2 },
+        { nom: "GP", ids: ["td_gp", "examen_gp"], coefs: [0.4, 0.6], multiple: 2 },
+        { nom: "MN_NEW", ids: ["tp_mn_new", "examen_mn_new"], coefs: [0.4, 0.6], multiple: 2 },
+        { nom: "POO_NEW", ids: ["tp_poo_new","examen_poo_new"], coefs: [0.4, 0.6], multiple: 1 },
+    ];
+    
+    let matieres2 = [
+        { nom: "BDD_NEW", ids: ["td_bdd_new", "tp_bdd_new", "examen_bdd_new"], coefs: [0.2, 0.2, 0.6], multiple: 3 },
+        { nom: "SE_NEW", ids: ["td_se_new", "tp_se_new", "examen_se_new"], coefs: [0.2, 0.2, 0.6], multiple: 3 },
+        { nom: "PL_NEW", ids: ["td_pl_new", "examen_pl_new"], coefs: [0.2, 0.2 , 0.6], multiple: 2 },
+        { nom: "POO2_NEW", ids: ["tp_poo_new", "examen_poo_new"], coefs: [0.4, 0.6], multiple: 2 },
+        { nom: "THL_NEW", ids: ["tp_thl_new", "td_thl_new", "examen_thl_new"], coefs: [0.2, 0.2, 0.6], multiple: 2 },
+        { nom: "PS2_NEW", ids: ["td_ps2_new", "examen_thl_new"], coefs: [0.4, 0.6], multiple: 2 },
+        { nom: "Entreprenariat", ids: ["examen_entreprenariat"], coefs: [1], multiple: 1 },
+    ];
+
+    
 
     calculerAnnee(matieres, matieres2);
 

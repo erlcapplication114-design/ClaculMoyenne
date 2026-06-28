@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculatrice de Moyenne</title>
+    <link rel="stylesheet" href="../pages_main_style.css">
+</head>
+
+<body data-page = "deuxieme_annee_new">
+    <div class="parent-mainbar">
+        <div class="child-mainbar">
+            <span style="position: relative; z-index: 1;">DEUXIEME ANNEE (>2025)</span>
+            <span style="position: relative; z-index: 1; color: #4a9eff; font-size: 14px; letter-spacing: 25px; padding-top: 10px;">LICENCE</span>                
+        </div>
+    </div>
+    <div class="page-wrap">
+        <a class="return" href="../index.html">⏎ Retour</a>
+
+        <div class="flex-container">
+
+            <div class="container1" id="container1_id">
+                <div class="entete"><label><strong>SEMESTRE III</strong></label></div>
+
+                <div class="matiere">
+                    <label class="nom_matiere">Algorithmique et Structure de Données III :</label>
+                    <div>
+                        <span>TD :</span><input type="number" id="td_algo3_new" placeholder="0">
+                        <span>TP :</span><input type="number" id="tp_algo3_new" placeholder="0">
+                        <span>Examen :</span><input type="number" id="examen_algo3_new" placeholder="0">
+                        <span id="moy_algo3_new"></span>
+                    </div>
+                </div>
+
+                <div class="matiere">
+                    <label class="nom_matiere">Architecture des Ordinateurs :</label>
+                    <div>
+                        <span>TD :<input type="number" id="td_ao_new" placeholder="0"></span>
+                        <span>TP :<input type="number" id="tp_ao_new" placeholder="0"></span>
+                        <span>Examen :<input type="number" id="examen_ao_new" placeholder="0"></span>
+                        <span id="moy_ao_new"></span>
+                    </div>
+                </div>
+
+                <div class="matiere">
+                    <label class="nom_matiere">Système d'Information :</label>
+                    <div>
+                        <span>TD :<input type="number" id="td_si_new" placeholder="0"></span>
+                        <span>TP :<input type="number" id="tp_si_new" placeholder="0"></span>
+                        <span>Examen :<input type="number" id="examen_si_new" placeholder="0"></span>
+                        <span id="moy_si_new"></span>
+                    </div>
+                </div>
+
+                <div class="matiere">
+                    <label class="nom_matiere">Programmation orienté objet :</label>
+                    <div>
+                        <span>TP :<input type="number" id="tp_poo_new" placeholder="0"></span>
+                        <span>Examen :</span><input type="number" id="examen_poo_new" placeholder="0">
+                        <span id="moy_poo_new"></span>
+                    </div>
+                </div>
+
+
+                <div class="matiere">
+                    <label class="nom_matiere">Méthode Numérique :</label>
+                    <div>
+                        <span>TP :<input type="number" id="tp_mn_new" placeholder="0"></span>
+                        <span>Examen :</span><input type="number" id="examen_mn_new" placeholder="0">
+                        <span id="moy_mn_new"></span>
+                    </div>
+                </div>
+
+                <div class="matiere">
+                    <label class="nom_matiere">Probabiltés et Statistique :</label>
+                    <div>
+                        <span>TD :<input type="number" id="td_ps" placeholder="0"></span>
+                        <span>Examen :<input type="number" id="examen_ps" placeholder="0"></span>
+                        <span id="moy_ps"></span>
+                    </div>
+                </div>
+
+                <div class="matiere">
+                    <label class="nom_matiere">Gestion de Projets :</label>
+                    <div>
+                        <span>TD :<input type="number" id="td_gp" placeholder="0"></span>
+                        <span>Examen :<input type="number" id="examen_gp" placeholder="0"></span>
+                        <span id="moy_gp"></span>
+                    </div>
+                </div>
+
+                <div>
+                    <span id="moyenne_semestrielle"></span>
+                </div>
+            </div>
+
+            <div class="container2" id="container2_id">
+                <div class="entete"><label><strong>SEMESTRE IV</strong></label></div>
+
+
+
+                <div class="matiere">
+                    <label class="nom_matiere">Système d'exploitation 1 :</label>
+                    <div>
+                        <span>TD :<input type="number" id="td_se_new" placeholder="0"></span>
+                        <span>TP :<input type="number" id="tp_se_new" placeholder="0"></span>
+                        <span>Examen :<input type="number" id="examen_se_new" placeholder="0"></span>
+                        <span id="moy_se_new"></span>
+                    </div>
+                </div>
+
+
+                <div class="matiere">
+                    <label class="nom_matiere">Théorie des langages :</label>
+                    <div>
+                        <span>TD :<input type="number" id="td_thl_new" placeholder="0"></span>
+                        <span>TP :<input type="number" id="tp_thl_new" placeholder="0"></span>
+                        <span>Examen :</span><input type="number" id="examen_thl_new" placeholder="0">
+                        <span id="moy_thl_new"></span>
+                    </div>
+                </div>
+
+                
+
+
+                <div class="matiere">
+                    <label class="nom_matiere">Base de données :</label>
+                    <div>
+                        <span>TD :</span><input type="number" id="td_bdd_new" placeholder="0">
+                        <span>TP :</span><input type="number" id="tp_bdd_new" placeholder="0">
+                        <span>Examen :</span><input type="number" id="examen_bdd_new" placeholder="0">
+                        <span id="moy_bdd_new"></span>
+                    </div>
+                </div>
+
+                <div class="matiere">
+                    <label class="nom_matiere">Programmation orienté objet 2:</label>
+                    <div>
+                        <span>TP :<input type="number" id="tp_poo2_new" placeholder="0"></span>
+                        <span>Examen :</span><input type="number" id="examen_poo2_new" placeholder="0">
+                        <span id="moy_poo2_new"></span>
+                    </div>
+                </div>
+
+                <div class="matiere">
+                    <label class="nom_matiere">Programmation Linéaire :</label>
+                    <div>
+                        <span>TD :<input type="number" id="td_pl_new" placeholder="0"></span>
+                        <span>Examen :<input type="number" id="examen_pl_new" placeholder="0"></span>
+                        <span id="moy_pl_new"></span>
+                    </div>
+                </div>
+
+                <div class="matiere">
+                    <label class="nom_matiere">Probabilités et Statistique 2 :</label>
+                    <div>
+                        <span>TD :<input type="number" id="td_ps2_new" placeholder="0"></span>
+                        <span>Examen :<input type="number" id="examen_ps2_new" placeholder="0"></span>
+                        <span id="moy_ps2_new"></span>
+                    </div>
+                </div>
+
+                
+                <div class="matiere">
+                    <label class="nom_matiere">Entreprenariat :</label>
+                    <div>
+                        <span>Examen :<input type="number" id="examen_entreprenariat" placeholder="0"></span>
+                        <span id="moy_entreprenariat"></span>
+                    </div>
+                </div>
+
+                <div>
+                    <span id="moyenne_semestrielle2"></span>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="container3" id="container3_id">
+            <span id="moyenne_generale"></span>
+        </div>
+    </div>
+    <script src="../scriptcalcul.js"></script>
+</body>
+
+</html>

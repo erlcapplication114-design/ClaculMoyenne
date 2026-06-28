@@ -2,6 +2,60 @@
     padding: 0;
     box-sizing: border-box;
 }
+.parent-mainbar {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.child-mainbar {
+    flex-direction: column;
+    align-items: center;
+    gap: 5px;
+    padding: 20px;
+    position: relative;
+    display: flex;
+    width: fit-content;
+    border-radius: 150px;
+    justify-content: center;
+    font-weight: bold;
+    font-size: 30px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    letter-spacing: 15px;
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(25px);
+}
+
+.child-mainbar::before {
+    content: '';
+    position: absolute;
+    inset: -2px;
+    border-radius: 150px;
+    padding: 2px;
+    background: conic-gradient(
+        from var(--angle),
+        transparent 80%,
+        #ff007a 90%,
+        #ff007a 100%
+    );
+    -webkit-mask: 
+        linear-gradient(#fff 0 0) content-box, 
+        linear-gradient(#fff 0 0);
+    -webkit-mask-composite: xor;
+    mask-composite: exclude;
+    animation: rotate 3s linear infinite;
+}
+
+@property --angle {
+    syntax: '<angle>';
+    initial-value: 0deg;
+    inherits: false;
+}
+
+@keyframes rotate {
+    from { --angle: 0deg; }
+    to { --angle: 360deg; }
+}
 
 body {
     padding: 30px;
@@ -36,7 +90,7 @@ body {
     border-radius: 15px;
     min-width: 0;     
     flex: 1;                /* Donne exactement la même largeur aux deux blocs */
-    margin: 0;              /* Supprime le auto qui cassait l'alignement */
+    margin: 0;              
     padding: 30px;
     border: 1px solid rgba(255, 255, 255, 0.1);
     height: fit-content;
